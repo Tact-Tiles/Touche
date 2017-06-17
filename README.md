@@ -34,7 +34,7 @@ Assim como outros componentes do projeto, o código fonte de três projetos Andr
       ```
       Error:Project :app declares a dependency from configuration 'compile' to configuration 'default' which is not declared in the descriptor for project :ttapi.
       ```
-      1. Edite o arquivo ``
+      1. Edite o arquivo `Touche-master/settings.gradle`
           1. Vá em `Tools > Android > Sync Project with Graddle Files`
       1. Caso apareça o erro:
       ```
@@ -67,8 +67,8 @@ Assim como outros componentes do projeto, o código fonte de três projetos Andr
 ### Eventos e Ações
   1. A documentação da API está disponível no site [https://tact-tiles.github.io/AndroidAPI/](https://tact-tiles.github.io/AndroidAPI/)
   1. Os eventos recebidos estão descritos na classe [Glove.GloveListener](https://tact-tiles.github.io/AndroidAPI/com/tacttiles/api/Glove.GloveListener.html) e [Device.DeviceListener](https://tact-tiles.github.io/AndroidAPI/com/tacttiles/api/Device.DeviceListener.html)
-  1. As principais ações realizadas pelos objetos `Glove` e `Device` são (`Glove` é uma classe derivada de `Device` então possui as mesmas ações):
-      1. `Glove.draw()`: desenha um texto na luva
-      1. `Device.powerOff()`: desliga a luva
-      1. `Device.setTouchSensibility(int sensibility)`: define a sensibilidade ao toque
-      1. `Device.vibrateDevice(int times, int duration)`: vibra o dispositivo
+  1. As principais ações realizadas pelos objetos `Glove` e `Device` são:
+      1. `glove.draw()`: desenha um texto na luva
+      1. `glove.getDevice().powerOff()`: desliga a luva
+      1. `glove.getDevice().setTouchSensibility(int sensibility)`: define a sensibilidade ao toque
+      1. `glove.getDevice().vibrateDevice(int times, int duration)`: vibra o dispositivo
